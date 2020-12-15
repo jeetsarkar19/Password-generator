@@ -16,6 +16,7 @@ It makes use of :
 - **Pass_check function** : Which checks the feasibility of the password, ensuring the required parameters are fulfilled 
 
 ### Stage 2: Adding GUI to it using Tkinter 
+GUI using tkinter was made (dimensions are yet to be set, just an entry level GUI set-up). The GUI has 2 buttons, "Click" which produces a randomised password and "delete" which resets the textbox for future outputs. 
 
 
 (The given code is still under development)
