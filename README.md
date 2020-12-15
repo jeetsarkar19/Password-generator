@@ -15,7 +15,7 @@ It makes use of :
 - **Pass_gen function** : Which creates a random password from a set of characters 
 - **Pass_check function** : Which checks the feasibility of the password, ensuring the required parameters are fulfilled 
 
-### Adding GUI to it using Tkinter 
+### Stage 2: Adding GUI to it using Tkinter 
 
 
 (The given code is still under development)
