@@ -1,7 +1,9 @@
-# This is a small attempt on building a password generator and tweaking it into a gui type application
+# A small GUI application of password generator
 import random as rn
 import tkinter as tk
-blank=tk.Entry()
+win=tk.Tk()
+win.title("Password Generator")
+blank=tk.Entry(master=win)
 def pass_gen():
     n = rn.randint(10,20)
     pas=''
@@ -29,24 +31,24 @@ def pass_check(pas,n):
             c4+=1
     if (c1>0 and c2>0 and c3>0 and c4>0):
         blank.insert(0,pas)
-        
     else:
         pass_gen()
 def del_text():
     blank.delete(0,tk.END)
     return 0
+def quit_gui():
+    win.destroy()
+    return 0
+
 #Turning the text based code into a GUI application 
 
-win = tk.Tk()
-
-frame1=tk.Frame()
-frame1.grid(row=0,column=2)
-label=tk.Label(frame1,text="Welcome to the Password Generator")
-btn1=tk.Button(text="click me", command=pass_gen)  
-btn2=tk.Button(text="Delete", command=del_text)      
-label.pack()
-btn1.grid(row=2,column=2)
-btn2.grid(row=2,column=3)
-blank.grid(row=3,column=2)
-win.mainloop() 
-
+label=tk.Label(master=win,text="Welcome to the Password Generator")
+btn1=tk.Button(master=win,text="click me", command=pass_gen)  
+btn2=tk.Button(master=win,text="Delete", command=del_text)  
+btn3=tk.Button(master=win,text="Quit", command=quit_gui)   
+label.grid(row=0,column=1)
+btn1.grid(row=2,column=0)
+btn2.grid(row=2,column=1)
+btn3.grid(row=2,column=2)
+blank.grid(row=1,column=1)
+win.mainloop()
