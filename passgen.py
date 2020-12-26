@@ -5,6 +5,7 @@ win=tk.Tk()
 win.title("Password Generator")
 blank=tk.Entry(master=win)
 def pass_gen():
+    blank.delete(0,tk.END)
     n = rn.randint(10,20)
     pas=''
     space1 =[]
